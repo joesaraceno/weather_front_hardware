@@ -5,7 +5,7 @@
 #include <Adafruit_BME280.h>
 #include <ESP8266WiFi.h>
 
-#include "config.h"
+#include "Config.h"
 String apiKey = API_KEY;
 const char password[] = NET_PASS;
 const char ssid[] = SSID;
