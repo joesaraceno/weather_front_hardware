@@ -1,0 +1,6 @@
+{
+  "terminal.integrated.env.osx": {
+    "PATH": "/Users/joe/.platformio/penv/bin:/Users/joe/.platformio/penv:/Users/joe/.rvm/gems/ruby-2.4.1/bin:/Users/joe/.rvm/gems/ruby-2.4.1@global/bin:/Users/joe/.rvm/rubies/ruby-2.4.1/bin:/Users/joe/.yarn/bin:/Users/joe/.config/yarn/global/node_modules/.bin:/Users/joe/google-cloud-sdk/bin:/usr/lib/google-cloud-sdk/bin:/Users/joe/.node_modules_global/bin:/Users/joe/.nvm/versions/node/v12.8.0/bin:/Library/Python/3.7/bin:/Users/joe/bin:/usr/local/bin:/Users/joe/.cargo/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/bin:/Users/joe/.rvm/bin",
+    "PLATFORMIO_CALLER": "vscode"
+  }
+}

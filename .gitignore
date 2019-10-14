@@ -1,0 +1,8 @@
+# packages and binaries
+.pio
+
+# config files etc
+include/config.h
+
+# frontend application for displaying readings
+weather-front-app
