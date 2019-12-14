@@ -12,7 +12,8 @@ const char ssid[] = SSID;
 const char server[] = HOST_NAME;
 
 #define SEALEVELPRESSURE_HPA (1013.25)
-#define DELAY_TIME (60000)
+#define DELAY_TIME (60000)//seconds
+#define SLEEPTIME (6e7)//microseconds
 
 float convertF (float);
 void sendDataAndPrintValues (float, float, float);
@@ -50,6 +51,8 @@ void setup() {
   if (!bmeStatus) {
     Serial.println("Could not find a valid BME280 sensor, check wiring!");
     while (1);
+    
+    ESP.deepSleep(SLEEPTIME);
   }
 
   // TODO: send up a "down" status to the channel metadata
@@ -60,9 +63,6 @@ void setup() {
   // Make secon request for live barometric pressure
   // Use it to set the live SEALEVELPRESSURE_HPA for the day 
   // instead of using default value
-}
-
-void loop() {
   // take some readings
   tempF = convertF(bme.readTemperature());
   pressure = (bme.readPressure() / 1000.0F); //kPa
@@ -71,11 +71,11 @@ void loop() {
   // post them up
   sendDataAndPrintValues(tempF, humidity, pressure);
 
-  // repeat
-  delay(DELAY_TIME);
+  ESP.deepSleep(SLEEPTIME);
+}
 
-  // TODO make this sync up every few minutes 
-  // and start from fresh zero for consistent intervals
+void loop() {
+
 }
 
 void sendDataAndPrintValues (float tempF, float humid, float pressure) {
